@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Locator Examples</title>
+	<!-- <link rel="stylesheet" href="../../themes/base/jquery.ui.all.css">
+	<script src="../../jquery-1.7.2.js"></script>
+	<script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.position.js"></script>
+	<script src="../../ui/jquery.ui.autocomplete.js"></script> -->
+	
+	<link rel="stylesheet" href="Locators_files/jquery-ui.css">
+	<script src="Locators_files/jquery.js"></script>
+	<script src="Locators_files/jquery-ui.js"></script>
+	
+	<link rel="stylesheet" href="Locators_files/demos.htm">
+	<script>
+	$(function() {
+		var availableTags = [
+			"ActionScript",
+			"AppleScript",
+			"Asp",
+			"BASIC",
+			"C",
+			"C++",
+			"Clojure",
+			"COBOL",
+			"ColdFusion",
+			"Erlang",
+			"Fortran",
+			"Groovy",
+			"Haskell",
+			"Java",
+			"JavaScript",
+			"Lisp",
+			"Perl",
+			"PHP",
+			"Python",
+			"Ruby",
+			"Scala",
+			"Scheme"
+		];
+		$( "#tags" ).autocomplete({
+			source: availableTags
+		});
+	});
+	</script>
+</head>
+<body style="-moz-user-select: text;">
+	
+<div class="demo">
+	<div id="login" style="border:1px solid;">
+		<form id="loginForm">
+			<label for="username">UserName: </label> <input id="username" name="username" type="text"><br>
+			<label for="password">Password: </label> <input id="password" name="password" type="password"><br>
+			<input class="login" name="login" value="Login" type="submit">
+		</form>
+	</div>
+	<br>
+<div class="ui-widget">
+	<label for="tags">Tags: </label>
+	<input aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="ui-autocomplete-input" id="tags">
+</div>
+<br>
+	<h3>Simple Table</h3><br>
+	<table id="items">
+		<tbody><tr>
+			<td>Item</td>
+			<td>Qty</td>
+		</tr>
+		<tr>
+			<td>Item 1</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>Item 2</td>
+			<td>5</td>
+		</tr>
+	</tbody></table>
+	
+	<h3>Complex Table</h3><br>
+	<a href="http://mail.google.com/">GMail</a>&nbsp;|&nbsp; 
+	<a href="http://mail.google.com/">Inbox (10 New E-mails)</a>
+	
+	<table id="users" border="1">
+		<thead>
+			<tr>
+				<td>User Name</td>
+				<td>E-mail</td>
+				<td>Access</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Nash</td>
+				<td><a href="mailto:nash@test.com">Nash@test.com</a></td>
+				
+				<td>
+					<div>
+						<label for="user128_admin">Admin</label><input id="user128_admin" checked="checked" type="checkbox">
+						<label for="user128_cm">Content Manager</label><input id="user128_cm" type="checkbox">
+						<label for="user128_browser">Browser</label><input id="user128_browser" type="checkbox">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					John
+				</td>
+				<td>
+					<a href="mailto:user1@test.com">John@test.com</a>
+				</td>
+				
+				<td>
+					<div>
+						<label for="user220_admin">Admin</label><input id="user220_admin" type="checkbox">
+						<label for="user220_cm">Content Manager</label><input id="user220_cm" type="checkbox">
+						<label for="user220_browser">Browser</label><input name="browser" id="user220_browser" checked="checked" type="checkbox">
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>	
+	
+	<h3>Product Description</h3>
+    <div id="cnt_ctrl_12345"></div>
+	<div id="top5">
+      <div id="colorheading"><font color="red">Our</font>-<font color="green">Top 5</font>-<font color="blue">Products</font></div><br>
+        <span customattr="header">Description</span>
+		<b> for for Product</b>
+        <p id="first">Description for Product 1</p>
+        <p name="second">Description for Product 2</p>
+        <p class="third">Description for Product 3</p>
+		<p name="fourth">Description for Product 4</p>
+        <span>and</span>
+        <p class="last">Description for Product 5</p>
+    </div>
+	<div>
+		<p id="child">A Paragraph in a DIV</p>
+	</div>
+    	
+	<div>
+		<table width="100%">
+			<tbody><tr>
+				<td width="50%">
+					<img src="Locators_files/left_grey.png" alt="Previous">
+				</td>
+				<td width="50%">
+					<img src="Locators_files/right_grey.png" alt="Next">
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+	
+	<div class="cart-info">
+	<table border="1">
+			<thead>
+			  <tr>
+				<td class="name">Product Name</td>
+				<td class="model">Model</td>
+				<td class="quantity">Quantity</td>
+				<td class="price">Unit Price</td>
+				<td class="total">Total</td>
+			  </tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="name"><a href="">MacBook</a>
+							<div>
+							  </div>
+							<small>Reward Points: 600</small>
+					</td>
+					<td class="model">Product 16</td>
+					<td class="quantity"><input name="quantity[43]" value="1" size="1" type="text">
+					  &nbsp;
+					  <a href="">Update</a>
+					  <a href="">Remove</a>
+					  &nbsp;</td>
+					<td class="price">$589.50</td>
+					<td class="total">$589.50</td>
+				</tr>
+				<tr>
+					<td class="name"><a href="">iPhone</a></td>
+					<td class="model">product 11</td>
+					<td class="quantity"><input name="quantity[40]" value="1" size="1" type="text">
+					  &nbsp;
+					  &nbsp;
+						  <a href="">Update</a>
+						  <a href="">Remove</a>
+						  &nbsp;</td>
+					<td class="price">$120.68</td>
+					<td class="total">$120.68</td>
+			  </tr>
+			</tbody>
+	</table>
+	</div>
+</div><!-- End demo -->
+
+
+<ul style="z-index: 1; top: 0px; left: 0px; display: none;" aria-activedescendant="ui-active-menuitem" role="listbox" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul></body></html>

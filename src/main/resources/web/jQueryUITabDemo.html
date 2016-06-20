@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://dl.dropboxusercontent.com/u/55228056/jQueryUITabDemo.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>jQuery UI Tabs - Default functionality</title>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css">
+	<script src="./jQueryUITabDemo_files/jquery.js"></script>
+	<script src="./jQueryUITabDemo_files/jquery-ui.js"></script>
+	<!-- <script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.tabs.js"></script>
+	<link rel="stylesheet" href="../demos.css"> -->
+	<script>
+	$(function() {
+		$( "#MyTab" ).tabs();
+	});
+	</script>
+</head>
+<body>
+
+<div class="demo">
+
+<div id="MyTab" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="https://dl.dropboxusercontent.com/u/55228056/jQueryUITabDemo.html#tabs-1">Home</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="https://dl.dropboxusercontent.com/u/55228056/jQueryUITabDemo.html#tabs-2">Options</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="https://dl.dropboxusercontent.com/u/55228056/jQueryUITabDemo.html#tabs-3">Admin</a></li>
+	</ul>
+	<div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+		<p>This is Home Tab</p>
+	</div>
+	<div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+		<p>This is Options Tab</p>
+	</div>
+	<div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+		<p>This is Admin Tab</p>
+	</div>
+</div>
+
+</div><!-- End demo -->
+
+</body></html>

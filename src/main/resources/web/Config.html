@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://dl.dropboxusercontent.com/u/55228056/Config.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Build my Car - Configuration</title>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css">
+	<script src="./Config_files/jquery.js"></script>
+	<script src="./Config_files/jquery-ui.js"></script>
+	<!-- <script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.tabs.js"></script>
+	<link rel="stylesheet" href="../demos.css"> -->
+	<script>
+	$(function() {
+		$( "#MyTab" ).tabs();
+	});
+	</script>
+</head>
+<body>
+
+<div class="demo">
+
+<div id="MyTab" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="https://dl.dropboxusercontent.com/u/55228056/Config.html#tabs-1">Configure</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="https://dl.dropboxusercontent.com/u/55228056/Config.html#tabs-2">Your Details</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="https://dl.dropboxusercontent.com/u/55228056/Config.html#tabs-3">Payment</a></li>
+	</ul>
+	<div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+		<h2>Configure Your Car</h2>
+		<p>Select Make:
+		<select name="make">
+		  <option value="bmw">BMW</option>
+		  <option value="mercedes">Mercedes</option>
+		  <option value="audi">Audi</option>
+		  <option value="honda">Honda</option>
+		</select>
+		</p><p>
+		<input type="radio" name="fuel_type" value="Petrol"> Petrol &nbsp;
+		<input type="radio" name="fuel_type" value="Diesel"> Diesel
+		</p>
+		<p>
+		Select Optional Features: <br>
+		<input type="checkbox" name="abs" value="ABS">ABS <br>
+		<input type="checkbox" name="airbags" value="Airbags">Air Bags <br>
+		<input type="checkbox" name="parksensor" value="ParkingSensor">Parking Sensor<br>
+		<input type="checkbox" name="ledheadlamp" value="LEDHeadLamp" disabled="true">LED Head Lamp<br>
+		</p>
+		<p>
+		Select Colors (You can select multiple Colors):<br>
+		<select name="color" size="6" multiple="multiple" style="width:100px">
+			<option value="bl">Black</option>
+			<option value="wt">White</option>
+			<option value="rd">Red</option>
+			<option value="br">Brown</option>
+			<option value="sl">Silver</option>
+		</select>
+		<br>
+		<br>
+		<input type="submit" value="Next" name="Conf_Next">
+		</p>
+		<button id="helpbutton" onclick="window.open(&quot;help.html&quot;,&quot;HelpWindow&quot;,&quot;width=500,height=500&quot;);">Help</button>
+		<button id="chatbutton" onclick="window.open(&quot;OnlineChat.html&quot;,&quot;&quot;,&quot;width=500,height=500&quot;);">Online Chat Support</button>
+		<button id="visitbutton" onclick="window.open(&quot;VisitUs.html&quot;,&quot;VisitUsWindow&quot;,&quot;width=500,height=500&quot;);">Visit Us</button>
+	</div>
+	<div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+	</div>
+	<div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+	</div>
+</div>
+
+</div><!-- End demo -->
+
+</body></html>

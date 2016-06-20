@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0062)http://dl.dropboxusercontent.com/u/55228056/bmicalculator.html -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=10.000" 
+http-equiv="X-UA-Compatible">
+ <TITLE>BMI Calculator</TITLE> <!-- Meta Tags --> 
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252"> 
+<META name="GENERATOR" content="MSHTML 10.00.9200.16635"> 
+<META name="robots" content="index, follow"> <!-- CSS --> <LINK href="BMI%20Calculator_files/structure.css" 
+rel="stylesheet"> <LINK href="BMI%20Calculator_files/form.css" rel="stylesheet"> <!-- JavaScript --> <!-- <script src="scripts/wufoo.js"></script>  -->
+	 
+<SCRIPT type="text/javascript">
+
+
+		function cal_bmi(kg, htc){
+		   m = htc/100;
+		   h2 = m * m;
+
+		   bmi = kg/h2;
+	
+
+		   f_bmi = Math.floor(bmi);
+
+		   diff  = bmi - f_bmi;
+		   diff = diff * 10;
+
+		   diff = Math.round(diff);
+		   if (diff == 10){
+			  // Need to bump up the whole thing instead
+			  f_bmi += 1;
+			  diff = 0;
+		   }
+		   bmi = f_bmi + "." + diff;
+
+		   return bmi;
+		}
+		function compute(){
+		  		   // Set up variables for calculation
+			var weightKg;
+			var heightCMS;
+			var bmi;
+			var bmi_category;
+			weightKg = document.getElementById("weightKg");
+			heightCMS = document.getElementById("heightCMS");
+			error = document.getElementById("error");
+			error.innerText = "";
+			
+			if (heightCMS.value == "")
+			{
+				error.innerText = "Please enter Height";
+				return false;
+			}
+			if (weightKg.value == "")
+			{
+				error.innerText = "Please enter Weight";
+				return false;
+			}
+			
+			bmi = document.getElementById("bmi");
+			bmi_category = document.getElementById("bmi_category");
+
+		   w = weightKg.value;
+		   
+		//   i = parseInt(f.htc.value);
+		   i = heightCMS.value;
+
+		   // Do validation checking to ensure existence of values
+		
+		   bmi.value = cal_bmi(w, i);
+		   b = cal_bmi(w, i);
+		   
+		   if (b < 18.5)
+			bmi_category.value = "Underweight";
+		   else if((b >= 18.5) && (b <= 24.9))
+			bmi_category.value = "Normal";
+		   else if((b >= 25) && (b <= 29.9))
+			bmi_category.value = "Overweight";
+		   else if(b >= 30)
+			bmi_category.value = "Obesity";
+		}
+		
+	</SCRIPT>
+ <!--[if lt IE 10]>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+</HEAD> 
+<BODY id="public">
+<DIV class="ltr" id="container">
+<H1 id="logo"></H1><!-- <form id="form1" name="form1" class="wufoo leftLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+action="https://testmann.wufoo.com/forms/z7x3p9/#public"> --> <!-- <form id="form1" name="form1" class="wufoo leftLabel page" autocomplete="off"> --> 
+<DIV class="wufoo leftLabel page"><HEADER class="info" id="header">
+<H2>BMI Calculator Page</H2>
+<DIV>Enter Your Height and Weight (in Metric) to Calculate Your 
+BMI</DIV></HEADER>
+<UL>
+  <LI class="notranslate      " id="foli1"><LABEL class="desc" id="title1" for="heightCMS">
+  Height in Centimeters: <SPAN class="req" id="req_1">*</SPAN> </LABEL>
+  <DIV><INPUT name="heightCMS" tabindex="1" class="field text medium" id="heightCMS" 
+  onkeyup="" type="number" maxlength="255"> </DIV></LI>
+  <LI class="notranslate      " id="foli2"><LABEL class="desc" id="title2" for="weightKg">
+  Weight in Kilograms: <SPAN class="req" id="req_2">*</SPAN> </LABEL>
+  <DIV><INPUT name="weightKg" tabindex="2" class="field text medium" id="weightKg" 
+  onkeyup="" type="number" maxlength="255"> </DIV></LI>
+  <LI class="buttons ">
+  <DIV><!-- <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit" onclick="error.innerText = 'some error';"/> -->
+  		 <INPUT id="Calculate" onclick="compute(); return false" type="button" value="Calculate" data-theme="d">
+  	 </DIV></LI><LABEL>Your BMI is:</LABEL><INPUT name="bmi" id="bmi" type="text" 
+  readonly="true"><BR><LABEL>Category:</LABEL><INPUT name="bmi_category" id="bmi_category" 
+  type="text" readonly="true"><BR><BR>
+  <DIV id="error">&nbsp;</DIV></UL></DIV><!-- </form>  --> </DIV><!--container--> 
+</BODY></HTML>
