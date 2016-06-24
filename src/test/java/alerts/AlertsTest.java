@@ -1,25 +1,23 @@
 package alerts;
 
-import org.testng.annotations.Test;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 //import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.remote.CapabilityType;
-//import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 
 public class AlertsTest {
 
-	WebDriver driver;
-	Alerts alert;
+	static WebDriver driver;
+	static Alerts alert;
 
 	@BeforeClass
-	public void beforeClass() {
+	public static void beforeClass() {
 		//DesiredCapabilities dc = new DesiredCapabilities();
 	//	dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 		driver = new FirefoxDriver();
@@ -38,7 +36,6 @@ public class AlertsTest {
 	    al.dismiss();
 	}
 	
-
 	@Test
 	public void testConfirmationBox() {
 		Alert al = alert.confirmationBox();
@@ -71,15 +68,11 @@ public class AlertsTest {
 		alert.prompt();
 	    al.dismiss(); 		
 	}
-	
-	
-	
-	
-	
-	
+		
 	@AfterClass
-	public void afterClass(){
+	public static void afterClass(){
 		driver.close();
 		driver.quit();
 	}
+	
 }

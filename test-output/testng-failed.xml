@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="alerts.AlertsTest">
+      <class name="browser.CookiesTest">
         <methods>
-          <include name="afterClass"/>
-          <include name="testPrompt"/>
           <include name="beforeClass"/>
+          <include name="handleCookies"/>
         </methods>
-      </class> <!-- alerts.AlertsTest -->
+      </class> <!-- browser.CookiesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
