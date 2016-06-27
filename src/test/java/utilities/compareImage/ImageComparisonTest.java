@@ -1,4 +1,4 @@
-package compareImage;
+package utilities.compareImage;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +9,9 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import utilities.compareImage.CompareImage;
+import utilities.compareImage.CompareUtil;
 
 public class ImageComparisonTest {
 

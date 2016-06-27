@@ -1,4 +1,4 @@
-package compareImage;
+package utilities.compareImage;
 
 public class ImageComparison {
 

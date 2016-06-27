@@ -1,4 +1,4 @@
-package compareImage;
+package utilities.compareImage;
 
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -8,7 +8,7 @@ public class CompareUtil {
 	
 	public enum Result { Matched, SizeMismatch, PixelMismatch };
 	
-	static Result CompareImage(String baseFile, String actualFile) {
+	public static Result CompareImage(String baseFile, String actualFile) {
 		
 		Result compareResult = Result.PixelMismatch;
 		Image baseImage = Toolkit.getDefaultToolkit().getImage(baseFile);

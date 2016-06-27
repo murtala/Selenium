@@ -1,4 +1,4 @@
-package compareImage;
+package utilities.compareImage;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

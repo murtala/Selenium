@@ -25,7 +25,6 @@ public class Steps {
 		// Optional, if not specified, WebDriver will search your path for chromedriver.
 		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath().replace("..", "src\\main"));
 		driver = new ChromeDriver();
-		System.out.println("GIVEN");
 		driver.get("http://www.google.com");
 	}
 	
