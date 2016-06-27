@@ -110,6 +110,14 @@
     <version>1.2.4</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/com.pojosontheweb/monte-repack -->
+<dependency>
+    <groupId>com.pojosontheweb</groupId>
+    <artifactId>monte-repack</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
+
        <!--  <dependency>
             <groupId>org.seleniumhq.selenium.client-drivers</groupId>
             <artifactId>selenium-client-drivers</artifactId>
