@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ParameterExampleSuite]" parallel="none">
+  <test name="Default test(failed)" parallel="none">
+    <classes>
+      <class name="dataDriven.dataProvider.DataProviderExampleTest">
+        <methods>
+          <include name="usingXMLFile"/>
+        </methods>
+      </class> <!-- dataDriven.dataProvider.DataProviderExampleTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [ParameterExampleSuite] -->

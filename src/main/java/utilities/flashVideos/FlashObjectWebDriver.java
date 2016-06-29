@@ -1,4 +1,4 @@
-package flashVideos;
+package utilities.flashVideos;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 

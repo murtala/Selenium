@@ -1,4 +1,4 @@
-package flashVideos;
+package utilities.flashVideos;
 
 import static org.junit.Assert.*;
 
